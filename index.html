@@ -373,7 +373,7 @@
           </p>
         </div>
         <div class="media-container">
-          <p class="media-text">Social media</p>
+          <p class="footer-paragrafs">Social media</p>
           <ul class="icon-media-list">
             <li class="icon-item">
               <a class="footer-media-link" href="">
@@ -405,6 +405,20 @@
             </li>
           </ul>
         </div>
+        <div class="form-container">
+          <p class="footer-paragrafs">Subscribe</p>
+          <div class="footer-form-box">
+            <form class="footer-form" name="email_form">
+              <input class="footer-input" type="email" name="useremail" placeholder="E-mail">
+            </form>
+            <div class="footer-btn-box">
+              <button class="footer-btn" type="submit">Subscribe</button>
+              <svg class="footer-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#airplane"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- modal window -->
@@ -415,8 +429,49 @@
             <use href="./images/icons.svg#close-black"></use>
           </svg>
         </button>
-        <div class="modal-form-box"><form class="form"></form>
-      </div>
+          <p class="modal-text">
+          Leave your contacts and we will call you back
+        </p>
+          <form class="form" name="contacts_form">
+           <div class="modal-form-box">
+            <label class="form-label">
+              <span class="lable-span">Name</span>
+              <div class="input-icon-box">
+                <input class="form-input" type="text" name="username">
+                <svg class="input-icon" width="18" height="18">
+                  <use href="./images/icons.svg#person"></use>
+                </svg>
+              </div>
+            </label>
+            <label class="form-label">
+              <span class="lable-span">Phone</span>
+            <div class="input-icon-box">
+                <input class="form-input" type="tel" name="userphone">
+                <svg class="input-icon" width="18" height="24">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+            </div>
+            </label>
+            <label class="form-label">
+              <span class="lable-span">Email</span>
+            <div class="input-icon-box">
+                <input class="form-input" type="email" name="useremail">
+                <svg class="input-icon" width="18" height="24">
+                  <use href="./images/icons.svg#email"></use>
+                </svg>
+            </div>
+            </label>
+            <label class="form-label">
+              <span class="lable-span">Comment</span>
+              <textarea class="form-textarea" name="comment" rows="3" placeholder="Text input"></textarea>
+            </label>
+            <div class="box-chackbox">
+              <input class="input-checkbox" type="checkbox" name="consent" value="0"/>
+              <p class="checkbox-text">I accept the terms and conditions of the <span class="">Privacy Policy</span></p>
+            </div>
+            <button class="form-btn" type="submit">Send</button>
+          </div>
+         </form>
     </div>
     <script src="./js/modal.js"></script>
   </body>
