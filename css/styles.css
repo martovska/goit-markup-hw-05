@@ -527,10 +527,13 @@ body {
 
 .form-container {}
 
-.footer-form {}
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
 
-.footer-form-box{
-display: flex;
+.footer-label{
+
 }
 
 .footer-input {
@@ -540,15 +543,19 @@ display: flex;
   border-radius: 4px;
   border: 1px solid var(--white-background);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background: var(--dark);
-  margin-right: 24px;
+  background-color: transparent;
+  
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: var(--white-background);
+
 }
 
 input::placeholder {
   color: var(--white-background);
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 .footer-btn {
@@ -559,13 +566,14 @@ input::placeholder {
   letter-spacing: 0.04em;
   color: var(--white-background);
   background-color: var(--primary-brand);
-  border: var(--primary-brand);
+  border: none;
   cursor: pointer;
   min-width: 165px;
+  height: 40px;
   border-radius: 4px;
-  padding: 8px 24px;
- display: flex;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
@@ -576,12 +584,6 @@ input::placeholder {
 }
 
 .footer-btn-icon{
-  position: absolute;
-  top: 8px;
-  right: 24px;
-  bottom: 8px;
-  width: 24px;
-  height: 24px;
   margin-left: 16px;
   fill: var(--white-background)
 }
@@ -755,7 +757,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   pointer-events: none;
 }
 
-.modal {
+.modal-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -766,7 +768,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   background: var(--dairy, #FCFCFC);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -806,7 +808,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .modal-text {
-  display: block;
   text-align: center;
   width: 360px;
   font-weight: 500;
@@ -814,13 +815,11 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark);
-  margin-top: 48px;
   margin-bottom: 16px;
 }
 
 .label-form-box {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .form {
@@ -828,27 +827,25 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .form-label {
+  display: block;
+  margin-bottom: 4px;
   color: var(--light-slate, #8E8F99);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 
 .input-icon-box{
-  position: relative;
+position: relative;
 }
 
 .form-input {
-  width: 360px;
+  width: 100%;
   height: 40px;
-  padding: 11px 62px;
-  margin-bottom: 8px;
-  font-size: 18px; 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding-left: 38px; 
   outline: transparent;
+  background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
@@ -861,30 +858,30 @@ border-color: var(--primary-brand);
 
 .input-icon {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
+  top: 50%;
   left: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--dark);
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .form-input:focus + .input-icon {
-  border-color: var(--primary-brand);
-  fill: var(--primary-brand)
+  fill: var(--primary-brand);
 }
 
 
 .form-textarea {
   display: block;
   flex-direction: column;
-  width: 360px;
+  width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   padding: 8px 16px;
-  margin-bottom: 16px;
+  resize: none;
   border-radius: 4px;
   border: 1px solid var(--dark rgba(46, 47, 66, 0.40));
   outline: transparent;
@@ -895,23 +892,18 @@ border-color: var(--primary-brand);
   border-color: var(--primary-brand);
 }
 
-textarea::placeholder {
-  color: var(--dark rgba(46, 47, 66, 0.40));
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 0.03 em;
- 
-}
-
-.box-chackbox {
-  display: flex;
-  align-items: flex-start;
+.box-checkbox {
   margin-bottom: 24px;
-  position: relative;
 }
 
-.chakbox-icon{
+.checkbox-label {
+  color: var(--light-slate);
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.checkbox-icon {
   position: absolute;
   top:0;
   left:0;
@@ -936,20 +928,23 @@ textarea::placeholder {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-checkbox:hover + .chakbox-icon {
-  border:none;
-  background-color: var(--pressed-state);
-}
+.modal-checkbox-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 
-.checkbox-text ,
-.modal-link {
-  color: #8E8F99;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  
 }
+ .input-checkbox:checked + .modal-checkbox-span {
+  background-color: var(--pressed-state);
+  border: none;
+  fill: var(--light);
+ }
 
 .modal-link{
   color:var(--primary-brand);
@@ -966,6 +961,8 @@ textarea::placeholder {
   border: var(--primary-brand);
   cursor: pointer;
   min-width: 169px;
+  height: 56px;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
@@ -976,6 +973,5 @@ textarea::placeholder {
 
 .form-btn:hover,
 .form-btn:focus {
-  background: var(--pressed-state);
-  border: none;
+  background: var(--pressed-state); 
 }
