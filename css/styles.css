@@ -907,22 +907,9 @@ border-color: var(--primary-brand);
 }
 
 .checkbox-icon {
-  position: absolute;
-  top:0;
-  left:0;
- 
-  padding: 0;
-  border: none;
-  margin: 0 auto;
-  padding:0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
 }
 
 .input-checkbox {
-  margin-right: 8px;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -934,6 +921,7 @@ border-color: var(--primary-brand);
 .modal-checkbox-span {
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -943,7 +931,7 @@ border-color: var(--primary-brand);
   fill: transparent;
 
 }
- .input:checked + .modal-checkbox-span {
+ .input-checkbox:checked + .checkbox-label .modal-checkbox-span {
   background-color: var(--pressed-state);
   border: none;
   fill: var(--light);
