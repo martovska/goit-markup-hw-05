@@ -943,7 +943,7 @@ border-color: var(--primary-brand);
   fill: transparent;
 
 }
- .input-checkbox:checked + .modal-checkbox-span {
+ .input:checked + .modal-checkbox-span {
   background-color: var(--pressed-state);
   border: none;
   fill: var(--light);
